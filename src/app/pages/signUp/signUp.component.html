@@ -1,0 +1,53 @@
+<app-default-login-layout 
+title="Crie sua conta"
+primaryBtnText="Cadastrar"
+secundaryBtnText="Entrar"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!signUpForm.valid"
+>
+
+    <form [formGroup]="signUpForm">
+        <app-primary-input
+        formControlName="name"
+        InputName="name"
+        type="text"
+        label="Nome"
+        placeholder="José Roberto"
+        >
+            <img style="width: 20px;" src="assets/svg/iconeEmail.svg"/>
+        </app-primary-input>    
+
+        <app-primary-input
+        formControlName="email"
+        InputName="email"
+        type="email"
+        label="Email"
+        placeholder="johndoe@gmail.com"
+        >
+            <img style="width: 20px;" src="assets/svg/iconeEmail.svg"/>
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="password"
+        InputName="password"
+        type="password" 
+        label="Senha"
+        placeholder=""
+        >
+            <img style="width: 20px;" src="assets/svg/iconePassword.svg"/>
+        </app-primary-input>
+
+        <app-primary-input
+        formControlName="passwordConfirm"
+        InputName="passwordConfirm"
+        type="password" 
+        label="Confirme sua senha"
+        placeholder=""
+        >
+            <img style="width: 20px;" src="assets/svg/iconePassword.svg"/>
+        </app-primary-input>
+
+    </form>
+
+</app-default-login-layout>
