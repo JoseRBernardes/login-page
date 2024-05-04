@@ -1,7 +1,11 @@
 <app-default-login-layout 
 title="Acesse ou crie sua conta"
 primaryBtnText="Entrar"
-secundaryBtnText="Inscreva-se agora">
+secundaryBtnText="Inscreva-se agora"
+(submit)="submit()"
+(navigate)="navigate()"
+[disablePrimaryBtn]="!loginForm.valid"
+>
 
     <form [formGroup]="loginForm">
         <app-primary-input
@@ -23,6 +27,7 @@ secundaryBtnText="Inscreva-se agora">
         >
             <img style="width: 30px;" src="assets/svg/iconePassword.svg"/>
         </app-primary-input>
+        <span>Esquceu sua senha?</span>
     </form>
 
 </app-default-login-layout>
